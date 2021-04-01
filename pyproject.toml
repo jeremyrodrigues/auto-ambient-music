@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "Auto Ambient Music"
+version = "0.1.0"
+description = "System for make a ambiente sound automatcly"
+authors = ["jeremyrodrigues"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^3.1.7"
+pafy = "^0.5.5"
+python-vlc = "^3.0.11115"
+youtube_dl = "^2021.3.31"
+
+[tool.poetry.dev-dependencies]
+ipython = "^7.22.0"
+pylint = "^2.5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
