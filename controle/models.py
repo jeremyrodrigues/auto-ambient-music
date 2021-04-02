@@ -4,7 +4,7 @@ from controle.choices import *
 # Create your models here.
 class Music (models.Model):
     url = models.URLField(unique=True)
-    description = models.CharField(max_length=256, blank=True, null=True)
+    description = models.CharField(max_length=256)
     def __str__(self):
         return self.description
 
