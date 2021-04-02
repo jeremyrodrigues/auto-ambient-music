@@ -11,6 +11,7 @@ poetry install
 poetry shell
 python manage.py migrate
 python manage.py createsuperuser
+(press Ctrl+C to exit thread)
 
 ```
 obs: in sometimes you need press Ctrl+c 2 times for stop a thread, after run a command.
