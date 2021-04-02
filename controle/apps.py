@@ -18,7 +18,7 @@ class PlayerThread(Thread):
             times = Time.objects.all()
             now = datetime.now()
             for t in times:
-                if playing:
+                if playing and player.is_playing():
                     if playing.id == t.id:
                         if now.time() >= playing.final_time:
                             v=VOLUMES[t.vol][1]
@@ -39,7 +39,7 @@ class PlayerThread(Thread):
                             while v_max > v:
                                 v += 1
                                 player.audio_set_volume(v)
-                                time.sleep(0.5)
+                                time.sleep(0.3)
             times = None
             now = None
             time.sleep(15)
