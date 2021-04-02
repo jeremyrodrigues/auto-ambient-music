@@ -1,0 +1,11 @@
+[Unit]
+Description=ambient-music-service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+WorkingDirectory={{ folder cloneded }}
+ExecStart={{folder witch enviromente python}}/bin/python {{folder cloneded}}/manage.py runserver 0.0.0.0:8008 --noreload --insecure
+
+[Install]
+WantedBy=multi-user.target
