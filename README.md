@@ -13,6 +13,7 @@ python manage.py migrate
 python manage.py createsuperuser
 
 ```
+obs: in sometimes you need press Ctrl+c 2 times for stop a thread, after run a command.
 
 ## Usage
 Start server or create service to autorun in you system.
