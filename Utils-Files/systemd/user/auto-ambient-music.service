@@ -1,0 +1,11 @@
+[Unit]
+Description=ambient-music-service
+After=syslog.target network.target multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/mlb-srv/Programas-Mercearia/auto-ambient-music
+ExecStart=/home/mlb-srv/.cache/pypoetry/virtualenvs/auto_ambient_music-KcaoRNvT-py3.9/bin/python manage.py runserver 0.0.0.0:8000 --noreload --insecure
+
+[Install]
+WantedBy=multi-user.target
