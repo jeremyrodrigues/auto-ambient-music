@@ -15,4 +15,4 @@ class Time (models.Model):
     music = models.ForeignKey('Music', related_name='times', on_delete=models.CASCADE)
     vol = models.IntegerField(choices=VOLUMES, default=3)
     def __str__(self):
-        return f'{WEEKDAYS[self.weekday][1]} ({self.initial_time} - {self.final_time}) - {self.music} Vol = {self.vol}'
+        return f'{WEEKDAYS[self.weekday][1]} ({self.initial_time} - {self.final_time}) - {self.music} Vol = {VOLUMES[self.vol][1]}'
